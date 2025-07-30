@@ -1,0 +1,590 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--header-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.theme-switcher select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.home {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #555;
+}
+
+.info-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Theme Styles */
+.theme1 {
+  --header-bg: #ffffff;
+  --text-color: #222222;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  background-color: #f5f5f5;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.theme2 {
+  --header-bg: #1f1f1f;
+  --text-color: #ffffff;
+  --button-bg: #333;
+  --button-text: #fff;
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Georgia', serif;
+}
+
+.theme3 {
+  --header-bg: #fff0f5;
+  --text-color: #d81b60;
+  --button-bg: #ff4081;
+  --button-text: #fff;
+  background-color: #fffafc;
+  color: #d81b60;
+  font-family: 'Pacifico', cursive;
+}
+
+.theme1 *, .theme2 *, .theme3 * {
+  transition: all 0.3s ease;
+}
+
+
+.layout-theme1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-theme2 {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+.layout-theme2 .header {
+  grid-area: header;
+}
+
+.layout-theme2 .main-content {
+  grid-area: main;
+  padding: 2rem;
+}
+
+.layout-theme3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout-theme3 .main-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Theme 1 - Minimalist */
+.theme1 {
+  --header-bg: #ffffff;
+  --text-color: #222222;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+.layout-theme1 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Theme 2 - Sidebar */
+.theme2 {
+  --header-bg: #1a1a1a;
+  --text-color: #ffffff;
+  --button-bg: #555;
+  --button-text: #ffffff;
+  background-color: #0f0f0f;
+  color: var(--text-color);
+  font-family: 'Georgia', serif;
+}
+
+.theme2 .card {
+  background-color: #2a2a2a;
+  color: #ddd; /* or #eee for brighter text */
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.theme2 .card h3 {
+  color: #fff;
+}
+
+.theme2 .card p {
+  color: #ccc;
+}
+
+.layout-theme2 {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent sidebar from scrolling */
+}
+
+.layout-theme2 .sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;         /* Make it stick to viewport */
+  position: sticky;      /* Optional, for extra safety */
+  top: 0;
+  overflow: hidden;      /* Prevent internal scrolling */
+}
+
+.layout-theme2 .sidebar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.layout-theme2 .sidebar nav a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.layout-theme2 .sidebar nav a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.layout-theme2 .sidebar select {
+  margin-top: auto;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.layout-theme2 .main-content {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Theme 3 - Colorful Grid */
+.theme3 {
+  --header-bg: #ffe0f0;
+  --text-color: #d81b60;
+  --button-bg: #ff4081;
+  --button-text: #fff;
+  background-color: #fff0f8;
+  color: var(--text-color);
+  font-family: 'Pacifico', cursive;
+}
+
+.layout-theme3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout-theme3 .main-content {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.theme1 *, .theme2 *, .theme3 * {
+  transition: all 0.3s ease;
+}
+
+.layout-theme2 .sidebar .header-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar-theme-switcher select {
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.theme2 .main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow-y: auto;
+  height: auto;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+
+
+.layout-theme2 .sidebar {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  padding: 2rem 1.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #333;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar-theme-switcher {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.sidebar-theme-switcher label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.sidebar-theme-switcher select {
+  padding: 0.4rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-top {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-container {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Card grid for Theme 1 & 3 */
+.card-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-view .product-item {
+  background-color: var(--card-bg, #f9f9f9);
+  color: #222;
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-view .product-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.card-view .product-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-view .price {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-view .category {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* List layout for Theme 2 */
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.list-view .product-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #242424;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.list-view .product-item:hover {
+  transform: translateY(-2px);
+}
+
+.list-view .product-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.list-view .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.list-view .product-info h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+}
+
+.list-view .product-info .price {
+  color: #00e6e6;
+  font-weight: bold;
+}
+
+.list-view .product-info .category {
+  font-size: 0.9rem;
+  color: #bbb;
+}
