@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 .app {
@@ -29,11 +28,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-}
-
-.app-name {
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .nav {
@@ -86,59 +80,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.product-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-top: 2rem;
-}
-
-.card {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-
-.card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.price {
-  font-weight: bold;
-  color: #555;
-}
-
-.info-section {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Theme Styles */
-.theme1 {
-  --header-bg: #ffffff;
-  --text-color: #222222;
-  --button-bg: #007bff;
-  --button-text: #ffffff;
-  background-color: #f5f5f5;
-  color: #222;
-  font-family: Arial, sans-serif;
-}
+.theme2 .cta-button {
+  background: var(--button-bg);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: "Georgia", serif;
+  font-weight: bold;}
 
 .theme2 {
   --header-bg: #1f1f1f;
@@ -147,23 +95,15 @@ body {
   --button-text: #fff;
   background-color: #121212;
   color: #eee;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
+  font-weight: bold;
 }
 
-.theme3 {
-  --header-bg: #fff0f5;
-  --text-color: #d81b60;
-  --button-bg: #ff4081;
-  --button-text: #fff;
-  background-color: #fffafc;
-  color: #d81b60;
-  font-family: 'Pacifico', cursive;
-}
-
-.theme1 *, .theme2 *, .theme3 * {
+.theme1 *,
+.theme2 *,
+.theme3 * {
   transition: all 0.3s ease;
 }
-
 
 .layout-theme1 {
   display: flex;
@@ -203,18 +143,6 @@ body {
   gap: 2rem;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Theme 1 - Minimalist */
 .theme1 {
   --header-bg: #ffffff;
@@ -223,41 +151,27 @@ body {
   --button-text: #ffffff;
   background-color: #f9f9f9;
   color: var(--text-color);
-  font-family: Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+/* Button styling */
+.theme1 .cta-button {
+  background: var(--button-bg);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
 }
 
-.layout-theme1 {
-  display: flex;
-  flex-direction: column;
+.theme1 .main-content {
+  background-color: #fefefe;
+  color: #222;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  /* padding: 4rem 1.5rem; */
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* Theme 2 - Sidebar */
-.theme2 {
-  --header-bg: #1a1a1a;
-  --text-color: #ffffff;
-  --button-bg: #555;
-  --button-text: #ffffff;
-  background-color: #0f0f0f;
-  color: var(--text-color);
-  font-family: 'Georgia', serif;
-}
-
-.theme2 .card {
-  background-color: #2a2a2a;
-  color: #ddd; /* or #eee for brighter text */
-  border: 1px solid #444;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.theme2 .card h3 {
-  color: #fff;
-}
-
-.theme2 .card p {
-  color: #ccc;
-}
 
 .layout-theme2 {
   display: flex;
@@ -274,16 +188,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;         /* Make it stick to viewport */
-  position: sticky;      /* Optional, for extra safety */
+  height: 100vh; /* Make it stick to viewport */
+  position: sticky; /* Optional, for extra safety */
   top: 0;
-  overflow: hidden;      /* Prevent internal scrolling */
-}
-
-.layout-theme2 .sidebar h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  overflow: hidden; /* Prevent internal scrolling */
 }
 
 .layout-theme2 .sidebar nav a {
@@ -298,15 +206,6 @@ body {
   font-weight: bold;
 }
 
-.layout-theme2 .sidebar select {
-  margin-top: auto;
-  padding: 0.5rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-}
-
 .layout-theme2 .main-content {
   flex: 1;
   height: 100vh;
@@ -318,107 +217,129 @@ body {
   align-items: center;
 }
 
-/* Theme 3 - Colorful Grid */
 .theme3 {
-  --header-bg: #ffe0f0;
-  --text-color: #d81b60;
-  --button-bg: #ff4081;
-  --button-text: #fff;
-  background-color: #fff0f8;
-  color: var(--text-color);
-  font-family: 'Pacifico', cursive;
+  --header-bg: linear-gradient(135deg, #6f5ce8 0%, #ff6584 70%);
+  --text-color: #ffffff;
+  --button-bg: #f72585; /* Vibrant pink */
+  --button-text: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #4cc9f0; /* Bright sky blue */
+
+  background: #dc2424; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a569d,
+    #dc2424
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a569d,
+    #dc2424
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #ffffff;
+font-family: 'Pacifico', cursive;
+  min-height: 100vh;
 }
 
-.layout-theme3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Header with glassmorphism effect */
+.theme3 .header {
+  background: #0000001a; /* Semi-transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.layout-theme3 .main-content {
+/* Cards with elegant hover effects */
+.theme3 .card-view .product-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  color: #333;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover effect - card lifts and gets accent border */
+.theme3 .card-view .product-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  border-top: 3px solid var(--accent-color);
+}
+
+/* Subtle glow effect on hover */
+.theme3 .card-view .product-item:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f72585, #4cc9f0);
+}
+
+/* Button styling */
+.theme3 .cta-button {
+  background: var(--button-bg);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+font-family: 'Pacifico', cursive;
+}
+
+/* Button hover effect */
+.theme3 .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(247, 37, 133, 0.4);
+}
+
+.theme3 .cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
 }
 
-.theme1 *, .theme2 *, .theme3 * {
+.theme3 .cta-button:hover::before {
+  left: 100%;
+}
+
+/* Navigation link hover */
+.theme3 .nav a:hover,
+.theme3 .sidebar-link:hover {
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Price and category accents */
+.theme3 .price {
+  color: var(--header-bg);
+  font-weight: 700;
+}
+
+.theme3 .category {
+  color: var(--button-bg);
+  font-weight: 600;
+}
+.theme1 *,
+.theme2 *,
+.theme3 * {
   transition: all 0.3s ease;
 }
 
-.layout-theme2 .sidebar .header-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.sidebar-nav a {
-  text-decoration: none;
-  color: #ccc;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.sidebar-nav a:hover {
-  color: #fff;
-  font-weight: bold;
-}
-
-.sidebar-theme-switcher select {
-  padding: 0.5rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-}
-
-.theme2 .main-content {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  overflow-y: auto;
-  height: auto;
-}
-
-.card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-
-
-.layout-theme2 .sidebar {
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  padding: 2rem 1.5rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-right: 1px solid #333;
-}
-
-.sidebar-inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 .sidebar-logo {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 2rem;
@@ -587,4 +508,212 @@ body {
 .list-view .product-info .category {
   font-size: 0.9rem;
   color: #bbb;
+}
+
+/* base app-name + logo scaling */
+.app-name {
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: bold;
+  transition: font-size 0.25s ease, transform 0.25s ease;
+}
+
+/* logo image */
+.header img.logo,
+.sidebar-logo img.logo {
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: width 0.25s ease, transform 0.25s ease;
+}
+
+.header:hover .app-name {
+  transform: scale(0.95);
+}
+.header:hover img.logo {
+  transform: scale(0.9);
+}
+
+@media (max-width: 500px) {
+  .app-name {
+    font-size: 1rem;
+  }
+
+  .header img.logo {
+    width: 20px;
+  }
+}
+
+.mobile-header-bar {
+  display: none; /* Hidden by default on desktop */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--header-bg);
+  padding: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mobile-theme-switcher select {
+  padding: 0.3rem 0.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Sidebar - Only appears when opened */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: var(--header-bg);
+  z-index: 1001;
+  padding: 1.5rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+
+.sidebar-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-theme-switcher {
+  margin-top: auto;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Main Content - No left margin needed */
+.main-content {
+  width: 100%;
+  padding: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* prevent horizontal overflow from flex/grid children */
+.layout-theme2,
+.layout-theme2 * {
+  min-width: 0;
+}
+
+/* kill any unexpected horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mobile-header-bar {
+    display: flex;
+  }
+
+  /* Add padding to main content to account for fixed header */
+  .main-content {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 80%;
+  }
+
+  .mobile-header-bar {
+    padding: 0.5rem;
+  }
+
+  .mobile-logo {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-content .about,
+  .main-content .contact,
+  .about,
+  .contact {
+    width: 100%;
+    max-width: 600px; /* optional cap so it doesn't stretch too wide on larger phones */
+    margin: 0 auto; /* horizontal centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem 2rem;
+    box-sizing: border-box;
+  }
+
+  /* If you have inner wrappers like headings / paragraphs, ensure they don't full-width stretch oddly */
+  .main-content .about > *,
+  .main-content .contact > * {
+    width: 100%;
+    max-width: 100%;
+  }
+  .header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .app-name {
+    font-size: 1.1rem;
+  }
+
+  .header img.logo {
+    width: 24px;
+  }
+
+  .nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
 }

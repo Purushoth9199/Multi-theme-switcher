@@ -1,8 +1,9 @@
 const Contact = () => (
   <section className="info-section">
-    <h1>Contact Us</h1>
+    <h1>Get in Touch</h1>
     <p>
-      Want to partner with us or have feedback about our UI? Drop us a message (or a fish).
+      Got feedback, bug reports, or just want to gush about the deals? Drop us a line — Cartzilla
+      loves hearing from its fellow bargain hunters. No actual monsters harmed in the making of this app.
     </p>
   </section>
 );
