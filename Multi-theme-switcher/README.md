@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+# 🛍️ Cartzilla – Multi-Theme Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cartzilla is a demo e-commerce frontend built with **React + TypeScript** to showcase multi-theme support.  
+It was created as part of a frontend developer assessment and demonstrates clean architecture, theme persistence, and responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Three Distinct Themes**
+  - **Theme 1 (Default):** Light, clean layout with sans-serif font
+  - **Theme 2 (Dark + Sidebar):** Dark mode with sidebar navigation and list view
+  - **Theme 3 (Colorful):** Colorful, card-grid layout with a fun Google font
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Multi-page routing**
+  - `Home` → Products grid/list with API integration
+  - `About` → Info page about the project
+  - `Contact` → Simple contact page
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Theme persistence** via `localStorage` (your preference is saved)
+- **Product caching** via `sessionStorage` for instant reloads
+- **Responsive design** for desktop , mobile and iPad
+- **Lightweight** (no heavy UI libraries; just CSS + React)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)  
+- TypeScript  
+- React Router  
+- Context API (for theme management)  
+- Fake Store API (product data)  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Project Structure
+
+src/
+├── components/ # Shared UI components (Header, Sidebar, etc.)
+├── context/ # ThemeContext & ProductsContext
+├── pages/ # Route pages (Home, About, Contact)
+├── styles/ # main.css + theme styles
+├── App.tsx # App routes and layout
+├── main.tsx # App entry point
+
+
+## ⚡ Getting Started
+
+### 1. Clone the repo
+
+git clone https://github.com/Purushoth9199/Multi-theme-switcher.git
+cd Multi-theme-switcher
+
+<!-- Install dependencies -->
+npm install
+
+ <!-- Start the dev server -->
+ npm start
