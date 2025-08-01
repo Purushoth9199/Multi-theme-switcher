@@ -50,7 +50,6 @@ src/
 ### 1. Clone the repo
 
 git clone https://github.com/Purushoth9199/Multi-theme-switcher.git
-cd Multi-theme-switcher
 
 <!-- Install dependencies -->
 npm install
