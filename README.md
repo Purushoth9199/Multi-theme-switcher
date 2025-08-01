@@ -49,10 +49,10 @@ src/
 
 ### 1. Clone the repo
 
-git clone https://github.com/Purushoth9199/Multi-theme-switcher.git
+Step 1 : git clone https://github.com/Purushoth9199/Multi-theme-switcher.git
 
 <!-- Install dependencies -->
-npm install
+Step 2 : npm install
 
  <!-- Start the dev server -->
- npm start
+Step 3 : npm start
