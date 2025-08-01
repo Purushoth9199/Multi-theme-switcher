@@ -86,7 +86,8 @@ body {
   position: relative;
   overflow: hidden;
   font-family: "Georgia", serif;
-  font-weight: bold;}
+  font-weight: bold;
+}
 
 .theme2 {
   --header-bg: #1f1f1f;
@@ -153,7 +154,7 @@ body {
   color: var(--text-color);
   font-family: "Inter", "Helvetica Neue", sans-serif;
 }
-/* Button styling */
+
 .theme1 .cta-button {
   background: var(--button-bg);
   transition: all 0.3s ease;
@@ -166,17 +167,15 @@ body {
   background-color: #fefefe;
   color: #222;
   font-family: "Inter", "Helvetica Neue", sans-serif;
-  /* padding: 4rem 1.5rem; */
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* Theme 2 - Sidebar */
 
 .layout-theme2 {
   display: flex;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent sidebar from scrolling */
+  height: 100vh; 
+  overflow: hidden; 
 }
 
 .layout-theme2 .sidebar {
@@ -188,10 +187,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh; /* Make it stick to viewport */
-  position: sticky; /* Optional, for extra safety */
+  height: 100vh; 
+  position: sticky; 
   top: 0;
-  overflow: hidden; /* Prevent internal scrolling */
+  overflow: hidden;
 }
 
 .layout-theme2 .sidebar nav a {
@@ -220,25 +219,25 @@ body {
 .theme3 {
   --header-bg: linear-gradient(135deg, #6f5ce8 0%, #ff6584 70%);
   --text-color: #ffffff;
-  --button-bg: #f72585; /* Vibrant pink */
+  --button-bg: #f72585; 
   --button-text: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.95);
-  --accent-color: #4cc9f0; /* Bright sky blue */
+  --accent-color: #4cc9f0; 
 
-  background: #dc2424; /* fallback for old browsers */
+  background: #dc2424;
   background: -webkit-linear-gradient(
     to right,
     #4a569d,
     #dc2424
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #4a569d,
     #dc2424
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 
   color: #ffffff;
-font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   min-height: 100vh;
 }
 
@@ -286,7 +285,7 @@ font-family: 'Pacifico', cursive;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 /* Button hover effect */
@@ -510,7 +509,6 @@ font-family: 'Pacifico', cursive;
   color: #bbb;
 }
 
-/* base app-name + logo scaling */
 .app-name {
   font-size: clamp(1rem, 2.2vw, 1.5rem);
   display: flex;
@@ -548,7 +546,7 @@ font-family: 'Pacifico', cursive;
 }
 
 .mobile-header-bar {
-  display: none; /* Hidden by default on desktop */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -574,7 +572,6 @@ font-family: 'Pacifico', cursive;
   border-radius: 4px;
 }
 
-/* Sidebar - Only appears when opened */
 .sidebar {
   position: fixed;
   top: 0;
@@ -617,7 +614,6 @@ font-family: 'Pacifico', cursive;
   margin-top: auto;
 }
 
-/* Overlay */
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -628,7 +624,6 @@ font-family: 'Pacifico', cursive;
   z-index: 1000;
 }
 
-/* Main Content - No left margin needed */
 .main-content {
   width: 100%;
   padding: 1rem;
@@ -640,13 +635,11 @@ font-family: 'Pacifico', cursive;
   box-sizing: border-box;
 }
 
-/* prevent horizontal overflow from flex/grid children */
 .layout-theme2,
 .layout-theme2 * {
   min-width: 0;
 }
 
-/* kill any unexpected horizontal scroll */
 html,
 body {
   overflow-x: hidden;
@@ -658,7 +651,6 @@ body {
     display: flex;
   }
 
-  /* Add padding to main content to account for fixed header */
   .main-content {
     padding-top: 60px;
   }
@@ -684,8 +676,8 @@ body {
   .about,
   .contact {
     width: 100%;
-    max-width: 600px; /* optional cap so it doesn't stretch too wide on larger phones */
-    margin: 0 auto; /* horizontal centering */
+    max-width: 600px; 
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -694,7 +686,6 @@ body {
     box-sizing: border-box;
   }
 
-  /* If you have inner wrappers like headings / paragraphs, ensure they don't full-width stretch oddly */
   .main-content .about > *,
   .main-content .contact > * {
     width: 100%;

@@ -7,6 +7,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Used to track resize and update if it is mobile view
+
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -14,11 +16,13 @@ const Header = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Handler for changing theme from dropdown
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value as ThemeType;
     setTheme(value);
   };
 
+  // Theme 2: Dark/sidebar layout
   if (theme === "theme2") {
     return (
       <>
@@ -44,6 +48,7 @@ const Header = () => {
           </div>
         )}
 
+        {/* Sidebar (shown on desktop or when mobile menu is open) */}
         {(!isMobile || isMenuOpen) && (
           <>
             <aside className={`sidebar ${isMobile ? "mobile-sidebar" : ""}`}>
@@ -60,6 +65,8 @@ const Header = () => {
                     Contact
                   </Link>
                 </nav>
+
+                {/* Theme dropdown inside sidebar */}
                 <div className="sidebar-theme-switcher">
                   <select value={theme} onChange={handleThemeChange}>
                     <option value="theme1">Default</option>
@@ -69,6 +76,8 @@ const Header = () => {
                 </div>
               </div>
             </aside>
+
+            {/* Overlay behind sidebar on mobile to close it when clicking outside */}
             {isMobile && isMenuOpen && (
               <div
                 className="sidebar-overlay"
@@ -81,6 +90,7 @@ const Header = () => {
     );
   }
 
+  // Themes 1 & 3: Top header layout
   return (
     <header className="header">
       <div className="header-container">
