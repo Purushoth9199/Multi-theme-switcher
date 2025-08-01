@@ -38,11 +38,11 @@ It was created as part of a frontend developer assessment and demonstrates clean
 
 ### 1. Clone the repo
 
-git clone https://github.com/Purushoth9199/Multi-theme-switcher.git
+Step 1 : git clone https://github.com/Purushoth9199/Multi-theme-switcher.git
 cd Multi-theme-switcher
 
 <!-- Install dependencies -->
-npm install
+Step 2 : npm install
 
  <!-- Start the dev server -->
- npm start
+Step 3 : npm start
