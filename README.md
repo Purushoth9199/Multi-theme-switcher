@@ -34,17 +34,6 @@ It was created as part of a frontend developer assessment and demonstrates clean
 
 ---
 
-## 📂 Project Structure
-
-src/
-├── components/ # Shared UI components (Header, Sidebar, etc.)
-├── context/ # ThemeContext & ProductsContext
-├── pages/ # Route pages (Home, About, Contact)
-├── styles/ # main.css + theme styles
-├── App.tsx # App routes and layout
-├── main.tsx # App entry point
-
-
 ## ⚡ Getting Started
 
 ### 1. Clone the repo
